@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "build:ui": "if exist dist rmdir /s /q dist && cd ..\\..\\part2\\phonebook && npm run build && xcopy /E /I build ..\\..\\part3\\phonebook\\dist",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +21,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@stylistic/eslint-plugin-js": "^2.7.2",
+    "eslint": "^9.10.0",
+    "globals": "^15.9.0",
     "nodemon": "^3.1.4"
   }
 }
