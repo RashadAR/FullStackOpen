@@ -75,8 +75,8 @@ const App = () => {
         }, 3000)
       })
       .catch(error => {
-        console.log(error);
-
+        setMessageType('error')
+        setMessage(error.response.data.error)
       })
   }
 
